@@ -1,0 +1,263 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(40px, 6vw, 80px);
+    margin: clamp(40px, 6vw, 80px) clamp(50px, 9vw, 170px);
+    margin-bottom: clamp(40px, 5vw, 70px);
+    padding-bottom: clamp(30px, 4vw, 50px);
+}
+
+.contact-title{
+    position: relative;
+}
+
+.contact-title h1{
+    padding: 0px clamp(10px, 2vw, 30px);
+    font-size: clamp(40px, 6vw, 80px);
+    font-weight: 600;
+}
+
+.contact-title img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: clamp(90px, 12vw, 160px);
+}
+
+.contact-section{
+    display: flex;
+    gap: clamp(30px, 5vw, 80px);
+    width: 100%;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+    min-width: 0;
+}
+
+.contact-left h1{
+    font-size: clamp(38px, 5.5vw, 80px);
+    font-weight: 700;
+    background: linear-gradient(270deg, #DF8908 80%, #B415FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-left p{
+    max-width: 550px;
+    color: #D8D8D8;
+    font-size: clamp(16px, 1.5vw, 20px);
+    line-height: clamp(28px, 2.5vw, 35px);
+}
+
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #D8D8D8;
+    font-size: clamp(17px, 1.6vw, 22px);
+}
+
+.contact-detail{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-right{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+    flex: 1;
+    min-width: 0;
+}
+
+.contact-right label{
+    color: #D8D8D8;
+    font-size: clamp(17px, 1.6vw, 22px);
+    font-weight: 500;
+}
+
+.contact-right input{
+    border: none;
+    width: 100%;
+    max-width: 700px;
+    height: clamp(56px, 6vw, 78px);
+    padding-left: 20px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: "outfit";
+    font-size: clamp(16px, 1.5vw, 20px);
+    box-sizing: border-box;
+}
+
+.contact-right textarea{
+    width: 100%;
+    max-width: 650px;
+    border: none;
+    padding: 25px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: "outfit";
+    font-size: clamp(16px, 1.5vw, 20px);
+    resize: none;
+    box-sizing: border-box;
+}
+
+.contact-submit {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.contact-submit:active,
+.contact-submit:hover {
+  outline: 0;
+}
+
+.contact-submit span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.contact-submit:hover span {
+  background: none;
+}
+
+.contact-submit:active {
+  transform: scale(0.9);
+}
+
+@media(max-width:768px){
+  .contact{
+    gap: 50px;
+    margin: 50px 70px;
+    align-items: start;
+  }
+  .contact-title h1{
+    padding: 0;
+    font-size: 50px;
+    font-weight: 600;
+  }
+  .contact-title img{
+    width: 130px;
+    margin-right: -20px;
+  }
+  .contact-section{
+    flex-direction: column;
+  }
+  .contact-left h1{
+    font-size: 54px;
+  }
+  .contact-left p{
+    font-size: 18px;
+  }
+  .contact-detail{
+    gap: 20px;
+  }
+  .contact-detail img{
+    width: 25px;
+  }
+  .contact-right label{
+    font-size: 20px;
+  }
+  .contact-right input{
+    width: 100%;
+    max-width: 100%;
+    font-size: 20px;
+  }
+  .contact-right textarea{
+    width: 95%;
+    max-width: 100%;
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 500px){
+  .contact{
+    margin: 40px 24px;
+    gap: 40px;
+    padding-bottom: 30px;
+  }
+  .contact-title h1{
+    font-size: 34px;
+  }
+  .contact-title img{
+    width: 100%;
+    height: 100%;
+    margin-right: -10px;
+  }
+
+  .contact-left h1{
+    font-size: 34px;
+  }
+  .contact-left p{
+    font-size: 15px;
+    line-height: 24px;
+    max-width: 100%;
+  }
+
+  .contact-detail img{
+    width: 20px;
+    flex-shrink: 0;
+  }
+  .contact-detail a,
+  .contact-detail p{
+    font-size: 14px;
+    word-break: break-word;
+  }
+  .contact-right{
+    gap: 18px;
+    width: 100%;
+    align-items: center;
+  }
+  .contact-right label{
+    font-size: 15px;
+    align-self: flex-start;
+    width: 100%;
+    max-width: 100%;
+  }
+  .contact-right input{
+    height: 50px;
+    font-size: 14px;
+    padding-left: 14px;
+    width: 100%;
+  }
+  .contact-right textarea{
+    width: 100%;
+    font-size: 14px;
+    padding: 16px;
+  }
+}

@@ -1,0 +1,119 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px clamp(50px, 9vw, 170px);
+}
+.logo{
+    width: 150px;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: clamp(20px, 4vw, 60px);
+    font-size: clamp(16px, 1.6vw, 20px);
+}
+.nav-menu li{
+    cursor: pointer;
+}
+.login-btn{
+    padding: clamp(12px, 1.8vw, 20px) clamp(20px, 3.5vw, 40px);
+    border-radius: 50px;
+    background: linear-gradient(267deg, #DA7C25 0.36%, #B923E1 102.06%);
+    color: white;
+    font-weight: 600;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    font-size: clamp(14px, 1.2vw, 18px);
+    transition: 0.5s;
+}
+.login-btn:hover{
+    transform: scale(1.05);
+}
+
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;;
+}
+
+.nav-menu li img{
+    display: flex;
+    margin: auto;
+}
+
+.nav-mob-close{
+    display: none;
+}
+
+.nav-mob-open{
+    display: none;
+}
+
+/* Mobile login li — desktop/tablet par hidden rahega */
+.nav-menu li.nav-login-mobile{
+    display: none;
+}
+
+@media(max-width:850px){
+    .logo{
+        width: 120px;
+    }
+    .nav-menu{
+        gap: clamp(4px, 2.5vw, 20px);
+    }
+}
+
+@media(max-width:768px){
+    .navbar{
+        margin: 20px 50px;
+    }
+    .nav-mob-open{
+        display: block;
+        position: fixed;
+        right: 30px;
+    }
+    .nav-mob-close{
+        display: block;
+        position: relative;
+        top: 30px;
+        left: 290px;
+        width: 30px;
+    }
+    .nav-menu{
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        gap: 30px;
+        background: #1f0016;
+        width: 350px;
+        height: 100%;
+        z-index: 2;
+        transition: right 0.5s;
+        right: -350px;
+    }
+    .nav-menu li{
+        font-size: 30px;
+        padding-left: 100px;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    /* Mobile: login li ko flex me dikhana */
+    .nav-menu li.nav-login-mobile{
+        display: flex;
+        padding-left: 100px;
+    }
+    .nav-login-mobile .login-btn{
+        font-size: 18px;
+        padding: 14px 30px;
+    }
+
+    .nav-connect{
+        display: none;
+    }
+}
