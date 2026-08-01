@@ -3,7 +3,7 @@ import { createContext } from "react";
 export const AppContext = createContext(null);
 
 const AppContextProvider = ({ children }) => {
-    let backend_url = "http://localhost:4000"
+    let backend_url = "https://shivansh-portfolio-backend.onrender.com"
     
     const value = {
         backend_url
