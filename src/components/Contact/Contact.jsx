@@ -103,6 +103,7 @@ const Contact = () => {
             placeholder="Enter your name"
             value={formData.name}
             onChange={handleChange}
+            required
           />
 
           <label>Your Email</label>
@@ -112,6 +113,7 @@ const Contact = () => {
             placeholder="Enter your email"
             value={formData.email}
             onChange={handleChange}
+            required
           />
 
           <label>Write your message here</label>
@@ -121,6 +123,7 @@ const Contact = () => {
             placeholder="Enter your message"
             value={formData.message}
             onChange={handleChange}
+            required
           />
 
           <button type="submit" className="contact-submit">
